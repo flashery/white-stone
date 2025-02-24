@@ -125,7 +125,7 @@ This project is licensed under the ISC License - see the LICENSE file for detail
 
 ## Credits
 
-- Built by [Your Name/Company]
+- Built by flashery
 - Uses [Tailwind CSS](https://tailwindcss.com/)
 - Uses [Swiper](https://swiperjs.com/) for carousels
 
