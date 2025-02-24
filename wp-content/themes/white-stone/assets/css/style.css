@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+    --color-mint-500: oklch(0.72 0.11 178);
+    --color-ws-blue: #273675;
+    --color-ws-blue-light: #7CABDC;
+    --color-ws-light-brown: #FBF6F2;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-ws-blue);
+}

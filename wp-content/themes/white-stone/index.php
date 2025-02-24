@@ -9,41 +9,31 @@
 </head>
 
 <body <?php body_class(); ?>>
-  <header>
-    <h1 class="text-3xl font-bold text-blue-600"><?php bloginfo('name'); ?></h1>
-  </header>
 
-  <main>
-    <h1 class="text-3xl font-bold text-blue-600">
-      My Tailwind Heading
-    </h1>
-    <p class="mt-4 text-gray-700">
-      Tailwind won't style this by default unless I add utility classes.
-    </p>
-    <?php
-    if (have_posts()) :
-      while (have_posts()) : the_post();
-        the_content();
-      endwhile;
-    else :
-      echo '<p>No posts found.</p>';
-    endif;
-    ?>
-    <!-- Example in a template file -->
-    <div class="p-4 sm:p-6 md:p-8 lg:p-12">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl">
-        Responsive heading with Tailwind
-      </h2>
-      <p class="mb-4 sm:mb-6 md:mb-8">
-        This text spacing and size changes based on screen sizes.
-      </p>
-    </div>
+  <?php get_template_part('header'); ?>
+
+  <main class="container mx-auto px-4">
+    <?php get_template_part('feature'); ?>
+
+    <?php get_template_part('about'); ?>
+
+    <?php get_template_part('home-sold'); ?>
+
+    <?php get_template_part('feature-blogs'); ?>
+
+    <?php get_template_part('cta'); ?>
+
+    <?php get_template_part('image-gallery'); ?>
+
+    <?php get_template_part('banners'); ?>
+
+    <?php get_template_part('testimonial'); ?>
+
+    <?php get_template_part('contact'); ?>
+
   </main>
 
-  <footer>
-    <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-  </footer>
-  <?php wp_footer(); ?>
+  <?php get_template_part('footer'); ?>
 </body>
 
 </html>
